@@ -1,0 +1,14 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Logs
+logs/
+
+# Temporary files
+tmp/
+*.tmp
+
+# IDE specific files
+.idea/
+.vscode/
