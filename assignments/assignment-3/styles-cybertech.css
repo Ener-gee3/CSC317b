@@ -1,0 +1,208 @@
+/* Import Futuristic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
+
+/* Root Variables */
+:root {
+    --tech-blue: #00b2ff;
+    --tech-silver: #c0c0c0;
+    --tech-dark: #1a1a1a;
+    --tech-black: #0a0a0a;
+    --white: #ffffff;
+    --glow-blue: 0px 0px 15px rgba(0, 178, 255, 0.8);
+    --glow-white: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Exo 2', sans-serif;
+}
+
+/* 🔥 BODY BACKGROUND WITH LOGO 🔥 */
+body {
+    font-family: var(--font-body);
+    background: var(--tech-black);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 🔥 BACKGROUND IMAGE - YOUR LOGO */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    background: url("images/favicon.png") no-repeat center center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0.15; /* Adjust for visibility */
+    z-index: -1;
+    filter: drop-shadow(0px 0px 50px rgba(0, 178, 255, 0.5)); /* Subtle neon glow effect */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--tech-blue), var(--tech-dark));
+    box-shadow: var(--glow-blue);
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: var(--font-title);
+    color: var(--white);
+    text-shadow: var(--glow-white);
+}
+
+/* Navigation Bar */
+nav {
+    background: var(--tech-dark);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--tech-blue);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.3em;
+    font-family: var(--font-title);
+    color: var(--tech-blue);
+    padding: 10px 20px;
+    transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    text-shadow: var(--glow-blue);
+    transform: scale(1.1);
+}
+
+/* Cyberpunk Section Styling */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Box */
+section {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--tech-blue);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--glow-blue);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px var(--tech-blue);
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#projects article {
+    background: var(--tech-dark);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--tech-blue);
+    box-shadow: var(--glow-blue);
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#projects article:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0px 0px 40px var(--tech-blue);
+}
+
+/* Contact Form */
+#contact form {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid var(--tech-silver);
+    border-radius: 5px;
+    font-size: 1em;
+    background: var(--tech-black);
+    color: var(--white);
+}
+
+/* Submit Button */
+#contact input[type="submit"] {
+    background: var(--tech-blue);
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 10px 15px;
+    transition: transform 0.2s, background 0.3s ease-in-out;
+}
+
+#contact input[type="submit"]:hover {
+    background: var(--white);
+    color: var(--tech-blue);
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--tech-blue), var(--tech-dark));
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+    text-shadow: var(--glow-white);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    body::before {
+        width: 80%;
+        height: 80%;
+        opacity: 0.2; /* Adjust visibility on smaller screens */
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects article {
+        flex: 1 1 100%;
+    }
+}

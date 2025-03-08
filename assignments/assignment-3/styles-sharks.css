@@ -1,0 +1,269 @@
+/* CSS for San Jose Sharks-Themed Portfolio */
+
+/* Variables for Colors */
+:root {
+    --deep-teal: #006D75;
+    --pacific-teal: #00B2CA;
+    --black: #000000;
+    --orange: #E57200;
+    --gray: #A9A9A9;
+    --white: #FFFFFF;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* General Body Styles */
+body {
+    font-family: var(--font-family);
+    background-color: var(--white);
+    color: var(--black);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header, footer {
+    background-color: var(--deep-teal);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial', sans-serif;
+    color: var(--white);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+footer {
+    font-size: 0.9em;
+    background-color: var(--black);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--pacific-teal);
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--orange);
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    padding: 20px;
+    background-color: var(--gray);
+    color: var(--black);
+}
+
+#about p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Education Section */
+#education ul {
+    padding: 0;
+}
+
+#education ul li {
+    background-color: var(--pacific-teal);
+    color: var(--white);
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#education img {
+    max-width: 40px;
+    margin-right: 10px;
+}
+
+/* Experience Section */
+#experience table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#experience th, #experience td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--black);
+}
+
+#experience th {
+    background-color: var(--deep-teal);
+    color: var(--white);
+}
+
+/* Projects Section */
+#projects {
+    padding: 20px;
+    background-color: var(--white);
+}
+
+#projects article {
+    background-color: var(--pacific-teal);
+    color: var(--white);
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#projects article h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+#projects article p {
+    font-size: 1.1em;
+}
+
+/* Contact Section */
+#contact {
+    padding: 20px;
+    background-color: var(--gray);
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact label {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--pacific-teal);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#contact input[type="submit"] {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: var(--deep-teal);
+}
+
+/* Footer */
+footer iframe {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    #projects article {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header h2 {
+        font-size: 1.3em;
+    }
+
+    #projects article {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: row;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    header, footer {
+        background-color: var(--deep-teal);
+        color: var(--white);
+    }
+
+    nav {
+        background-color: var(--pacific-teal);
+    }
+
+    nav a:hover {
+        background-color: var(--orange);
+    }
+
+    #about, #education, #experience, #projects, #contact {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    #projects article {
+        background-color: var(--deep-teal);
+    }
+
+    #contact input, #contact textarea {
+        background-color: var(--black);
+        color: var(--white);
+        border: 1px solid var(--pacific-teal);
+    }
+
+    #contact input[type="submit"] {
+        background-color: var(--orange);
+    }
+}

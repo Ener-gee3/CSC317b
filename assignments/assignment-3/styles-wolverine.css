@@ -1,0 +1,363 @@
+/* Wolverine Theme CSS for Chadd Holman's Portfolio */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap');
+
+/* Base styles and variables */
+:root {
+  --primary-yellow: #e6b800; /* Muted yellow, not too bright */
+  --secondary-blue: #0a3b63; /* Wolverine's uniform blue */
+  --dark-blue: #051d31;
+  --light-gray: #f0f0f0;
+  --accent-red: #a02020; /* For accents and highlights */
+  --font-main: 'Barlow', sans-serif;
+  --shadow-effect: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --claw-angle: 15deg;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-gray);
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Wolverine claw marks effect */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(var(--claw-angle), transparent 30%, var(--accent-red) 30%, var(--accent-red) 33%, transparent 33%, transparent 64%, var(--accent-red) 64%, var(--accent-red) 67%, transparent 67%);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(-var(--claw-angle), transparent 30%, var(--accent-red) 30%, var(--accent-red) 33%, transparent 33%, transparent 64%, var(--accent-red) 64%, var(--accent-red) 67%, transparent 67%);
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Header styles */
+header {
+  background: var(--secondary-blue);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-effect);
+  background-image: linear-gradient(135deg, var(--secondary-blue) 70%, var(--primary-yellow) 150%);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+
+.profile-image {
+  border: 4px solid var(--primary-yellow);
+  box-shadow: 0 0 15px rgba(230, 184, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(230, 184, 0, 0.7);
+}
+
+/* Navigation */
+nav {
+  background-color: var(--dark-blue);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-effect);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover, nav a:focus {
+  color: var(--primary-yellow);
+  border-bottom-color: var(--primary-yellow);
+}
+
+/* Main content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-effect);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Wolverine accent on sections */
+section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--primary-yellow), var(--accent-red), var(--primary-yellow));
+}
+
+section h2 {
+  color: var(--secondary-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--primary-yellow);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* Education and Experience sections */
+#education ul, #experience ul {
+  list-style: none;
+}
+
+#education li, #experience li {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#education li ul, #experience li ul {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  width: 100%;
+}
+
+#education li ul li, #experience li ul li {
+  font-weight: normal;
+  margin-bottom: 0.3rem;
+}
+
+#education img, #experience img {
+  margin-left: 1rem;
+}
+
+/* Experience table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: var(--shadow-effect);
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--secondary-blue);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: rgba(230, 184, 0, 0.1);
+}
+
+/* Projects section */
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+#projects h2 {
+  grid-column: 1 / -1;
+}
+
+#projects article {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid var(--primary-yellow);
+}
+
+#projects article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#projects h3 {
+  color: var(--secondary-blue);
+  margin-bottom: 0.8rem;
+}
+
+/* Contact section */
+#contact form {
+  display: grid;
+  gap: 1rem;
+}
+
+#contact label {
+  font-weight: 600;
+  color: var(--secondary-blue);
+}
+
+#contact input, #contact textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: var(--font-main);
+}
+
+#contact input:focus, #contact textarea:focus {
+  outline: none;
+  border-color: var(--primary-yellow);
+  box-shadow: 0 0 5px rgba(230, 184, 0, 0.5);
+}
+
+#contact input[type="submit"] {
+  background-color: var(--secondary-blue);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#contact input[type="submit"]:hover {
+  background-color: var(--primary-yellow);
+  color: var(--dark-blue);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+footer iframe {
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--primary-yellow);
+  border-radius: 8px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 0.5rem 0;
+  }
+  
+  #projects {
+    grid-template-columns: 1fr;
+  }
+  
+  footer iframe {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  section {
+    padding: 1.5rem;
+  }
+  
+  th, td {
+    padding: 0.7rem;
+  }
+}

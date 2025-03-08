@@ -1,0 +1,2 @@
+
+Provide a modern CSS document styling the provided html content. I would like it to be themed like wolverine from x-men,  however make sure not to use incredibly bright yellows. I would like flexboxes or grids. Please do not use a standard font like arial. I'd like something a bit different. Html:

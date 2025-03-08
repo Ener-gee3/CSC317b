@@ -1,0 +1,313 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Wolverine Color Scheme */
+:root {
+    --dark-blue: #1b1f3b;
+    --muted-yellow: #d4af37;
+    --gray-metal: #555555;
+    --light-gray: #d3d3d3;
+    --white: #ffffff;
+    --black: #000000;
+    --font-main: 'Bebas Neue', sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-main);
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+header {
+    background-color: var(--muted-yellow);
+    color: var(--black);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px var(--gray-metal);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.profile-image {
+    border: 4px solid var(--gray-metal);
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--gray-metal);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted-yellow);
+    font-size: 1.3em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--muted-yellow);
+    color: var(--black);
+    transform: scale(1.05);
+}
+
+/* Main Layout - Grid */
+/*
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* About Section 
+#about {
+    background-color: var(--gray-metal);
+    padding: 20px;
+    border-radius: 10px;
+    grid-column: span 2;
+}
+*/
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    /* Add or modify these lines: */
+    grid-template-rows: auto auto auto; /* Add explicit rows */
+    align-items: start; /* Align items to the top */
+    grid-auto-rows: min-content; /* Adjust rows to content size */
+}
+
+#about {
+    background-color: var(--gray-metal);
+    padding: 20px;
+    border-radius: 10px;
+    /* Remove or modify this line if necessary: */
+    /* grid-column: span 2; */
+}
+
+
+#about p {
+    font-size: 1.2em;
+}
+
+/* Education Section */
+#education {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#education ul {
+    list-style: none;
+    padding: 0;
+}
+
+#education li {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--muted-yellow);
+}
+
+#education img {
+    max-width: 40px;
+}
+
+/* Experience Section */
+#experience {
+    background-color: var(--gray-metal);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#experience table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#experience th, #experience td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid var(--muted-yellow);
+}
+
+#experience th {
+    background-color: var(--muted-yellow);
+    color: var(--black);
+}
+
+/* Projects Section - Flexbox */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+#projects article {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    border: 2px solid var(--muted-yellow);
+    box-shadow: 3px 3px 10px var(--black);
+}
+
+#projects article h3 {
+    font-size: 1.4em;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--gray-metal);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#contact form {
+    display: grid;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact label {
+    font-size: 1.2em;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    border: 1px solid var(--muted-yellow);
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: var(--dark-blue);
+    color: var(--white);
+}
+
+#contact input[type="submit"] {
+    background-color: var(--muted-yellow);
+    color: var(--black);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: var(--dark-blue);
+    color: var(--muted-yellow);
+}
+
+/* Footer */
+footer {
+    background-color: var(--black);
+    color: var(--muted-yellow);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+
+footer iframe {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects article {
+        flex: 1 1 100%;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    header {
+        background-color: var(--muted-yellow);
+        color: var(--black);
+    }
+
+    nav {
+        background-color: var(--gray-metal);
+    }
+
+    #about, #education, #experience, #projects, #contact {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    #projects article {
+        background-color: var(--dark-blue);
+    }
+
+    #contact input, #contact textarea {
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    #contact input[type="submit"] {
+        background-color: var(--muted-yellow);
+        color: var(--black);
+    }
+}

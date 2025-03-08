@@ -1,0 +1,228 @@
+Share
+
+User
+You said:
+Prompt for Creating a Professional San Jose Sharks-Themed CSS File for HTML Portfolio
+Overall Requirements
+
+Create a complete, professional CSS file for a developer portfolio website
+Theme the entire site around the San Jose Sharks NHL team
+Use the official Sharks color palette throughout the design
+Implement responsive design principles for all screen sizes
+Include dark/light mode toggle functionality
+Ensure all CSS meets modern web standards and best practices
+
+Brand Elements to Incorporate
+
+Primary colors: Deep Teal (#006D75), Pacific Teal (#00B2CA), and Black (#000000)
+Secondary colors: Orange (#E57200), Gray (#A9A9A9), and White (#FFFFFF)
+Include subtle shark fin or shark-related motifs in design elements
+Use the Sharks' angular, sharp-edged aesthetic for borders and design elements
+Consider incorporating subtle wave or ocean-inspired patterns for backgrounds
+
+Layout and Structure
+
+Design a clean, professional navigation bar that stands out with Sharks colors
+Create a hero section with space for a large banner image
+Design project showcase sections with card-based layouts
+Include styles for an about/bio section
+Create a contact form section with Sharks-themed input styling
+Design a footer with social media links and copyright info
+
+Typography
+
+Select web-safe fonts that complement the Sharks' brand aesthetic
+Create a clear typography hierarchy with defined styles for:
+
+All heading levels (h1-h6)
+Body text
+Navigation links
+Button text
+Form labels and inputs
+Footer text
+
+
+
+Interactive Elements
+
+Style hover states for all clickable elements
+Create Sharks-themed button styles (primary, secondary, ghost)
+Add subtle animations for interactive components
+Design form input styling that fits the Sharks theme
+Include styling for modal/popup components
+
+Portfolio-Specific Components
+
+Create project card designs with:
+
+Image containers
+Project title styling
+Project description styling
+Technology tag styling
+Call-to-action link styling
+
+
+Design skill/technology showcase section
+Style timeline or experience section elements
+
+Responsive Design
+
+Include media queries for:
+
+Mobile devices (below 480px)
+Tablets (481px to 768px)
+Small laptops (769px to 1024px)
+Desktops (1025px and above)
+
+
+Ensure navigation transforms into hamburger menu on mobile
+Make project cards stack vertically on smaller screens
+Adjust typography size and spacing for different screen sizes
+
+Advanced Features
+
+Include CSS for a dark/light mode toggle with appropriate color shifts
+Add subtle shark-themed loading animations
+Include styling for a "back to top" button
+Style scroll behavior for smooth transitions
+Add CSS for an image lightbox/gallery
+
+Accessibility Considerations
+
+Ensure sufficient color contrast throughout the design
+Include focus states for keyboard navigation
+Size all clickable elements appropriately for touch interfaces
+Provide text alternatives where needed
+
+Code Quality Requirements
+
+Write clean, well-commented CSS
+Organize the CSS logically by component/section
+Use CSS variables for the color palette and repeated values
+Include vendor prefixes where needed for cross-browser compatibility
+Optimize for performance (minimize redundant rules)     This will all be for the following html site: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of Chadd Holman">
+    <meta name="keywords" content="portfolio, web development, student, Chadd Holman">
+    <meta name="author" content="Chadd Holman">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Chadd Holman - Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1>Chadd Holman</h1>
+        <img src="images/20221112_141742001.jpg"
+             alt="Chadd Holman and his family"
+             class="profile-image img-fluid rounded-circle"
+             style="max-width: 200px; height: auto;">
+        <h2>My Personal Portfolio</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! My name is Chadd Holman, a passionate tech enthusiast pursuing a career in software engineering and business. I am currently working as a contractor at Outlier AI and as an independent sales representative for Aspire Software. My goal is to start my own tech company, leveraging my experience in machine learning, data analytics, and business relations. Welcome to my portfolio!</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    San Francisco State University
+                    <img src="images/school_logo.png" alt="School Logo" style="max-width: 40px; height: auto;">
+                    <ul>
+                        <li>Major: Computer Science</li>
+                        <li>Expected Graduation: 2026</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    De Anza College
+                    <img src="images/school_logo2.png" alt="School Logo" style="max-width: 40px; height: auto;">
+                    <ul>
+                        <li>Major: Liberal Arts with and emphasis on Business and Computer Science</li>
+                        <li>Graduated: 2020</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <table style="border: 1px solid #000;">
+                <tr>
+                    <th>Position</th>
+                    <th>Company</th>
+                    <th>Dates</th>
+                </tr>
+                <tr>
+                    <td>Contractor</td>
+                    <td>Outlier AI</td>
+                    <td>2024 - Present</td>
+                </tr>
+                <tr>
+                    <td>Independent Sales Rep</td>
+                    <td>Aspire Software</td>
+                    <td>2024 - Present</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <article>
+                <h3>AI Data Analytics Tool</h3>
+                <p>Developed an AI-powered data analytics tool streamlining data processing and insights generation for clients.</p>
+            </article>
+            <article>
+                <h3>C++ Terminal Snake Game</h3>
+                <p>Developed a copy of the game Snake.</p>
+            </article>
+            <article>
+                <h3>HTML website</h3>
+                <p>This website that will get much better</p>
+            </article>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Chadd Holman &bull; All rights reserved</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ojHHcBBHdJk?si=83j8poNtxZra5KMa" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </footer>
+</body>
+</html>
