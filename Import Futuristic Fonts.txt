@@ -1,0 +1,31 @@
+/*Import Futuristic Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
+
+/*Root Variables*/
+:root {
+	--tech-blue: #00b2ff;
+	--tech-silver: #c0c0c0;
+	-tech-dark: #1a1a1a;
+	--tech-black: #0a0a0a;
+	--white: #ffffff
+	--glow-white: 0px 0 px 15px rgba(0, 178, 255, 0.7);
+	--font-title: 'Orbitron', sans serif;
+	--font-body: 'Exo 2', sans serif;
+}
+
+/* Body Background with logo */
+body {
+	font-family: var(--font-body);
+	background: var(--tech-black);
+	color: var(--white);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow-x: hidden
+}
+
+/*Background image - my logo*/
+body::before{

@@ -1,0 +1,166 @@
+It is important to get the concepts; not actually memorizing but knowing where to go to get the information you need when you need it. 
+
+pseudo classes, pseudo elements.
+
+CSS variables
+Transitions and transforms
+
+animations
+
+All the code that he shows in class will be in his GitHub in examples. 
+
+Do I want to stay after the Indian class today? I don't really think i do. Maybe i should be 
+
++----------------------------------------------------------------------------------------------------------------------------+
+
+
+Pseudo classes:
+
+User actions states
+a:hover  { color: red;}
+a:active { color: darkred;}
+a:focus { outline: 2px solid blue;} 
+
+Form states 
+input:focus { border=color: blues}
+input:disabled { background-color: #eee;}
+input:checked + label { font-weight: bold;}
+
+structures
+li:first-child { font-weight: bold;}
+li:last-child {border-bottom: none; }
+li: nth-child(odd) { 
+
+
+w3schools go to the css section and go get it bruh
+ 
++.............................................................................................................................+
+
+
+More Pseudo classes
+
+Validation states:
+
+input:valid { border-color: green;}
+input:invalid { border-color: red;}
+input:required { border-left: 4px solidblue;}
+
+Link states:
+a:link { color: blue} /*unvisited*/
+a:visited { color: purple; } /*Visited*/
+
+
+Negation states: 
+:not(.special {opacity
+
++-----------------------------------------------------------------------------------------------------------------------------+
+
+pseudo elements
+
+first letter/line
+
+
+
+before and after
+
+
+
+
+selection styling
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+
+CSS variables (custom properties) 
+ needs to be in the css that I provide for the assignment 
+
+
+defining variables:
+
+:root {
+	--primary-color: #0066cc;
+	--secondary-color: #ff6600;
+	--padding-standard: 1rem;
+	--border-radius: 5px;
+	--font-heading: 'Georgia', serif;
+	--font-body: 'Arial', sans-serif;
+}
+
+using em;
+
+button {
+	background-color: var(--primary-color);
+	padding: var(--padding-standard);
+	border-radius: var(bo
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+
+Variables benefirs & scope
+
+Benefits:
+Easier theming and maintenance
+more readable
+can be change with js
+
+write this other stuff go anf find it within examples of GitHub ...
+
+
+scoping variables
+
+/*global vars*/
+
+
+
+/*scoped vars*/
+
+Makes sense nly if the style sheets  are massive
+
+/*scoped vars */
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+
+CSS transitions: 
+
+
+basics transitions: 
+
+.button { 
+	background-color:
+	
+
+
+
+
+
+
+
+multiple transitions:
+
+
+
+
+
+
+Write it up later since you clearly cannot keep up with this shit
+
++-------------------------------------------------------------------------------------------------------------------------------------------++++++
+
+
+Animations: 
+
+ css transforms .....
+
+
+
+
+
+
+
+
+
+
+
+
+ 
