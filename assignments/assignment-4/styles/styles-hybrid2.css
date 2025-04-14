@@ -1,0 +1,269 @@
+/* ===== Hybrid2.css ===== */
+
+/* Import Futuristic Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;700&display=swap');
+
+/* Root Variables for Colors & Fonts */
+:root {
+    /* Primary Periwinkle-Lavender Palette */
+    /* Updated main background color in the body section below */
+    --lavender: #E6E6FA; 
+    --periwinkle: #CCCCFF;
+
+    /* Standard Colors */
+    --white: #ffffff;
+    --dark-text: #333; 
+
+    /* Glow Effects */
+    --glow-peri: rgb(112, 122, 200);
+    --glow-white: 0px 0px 10px rgba(255, 255, 255, 0.7);
+
+    /* Futuristic Font Families */
+    --font-title: 'Orbitron', sans-serif;
+    --font-body: 'Exo 2', sans-serif;
+}
+
+/* Body & Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    /* 1) Updated background color */
+    background-color: rgb(112, 122, 200);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* 2) Shift the logo background image into the right third */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 80%; /* Position near the right third */
+        width: 60%;
+        height: 60%;
+        background: url("../images/favicon.png") no-repeat center center;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+        opacity: 0.15; /* Adjust for visibility */
+        z-index: -1;
+        /* Soft periwinkle glow around the logo */
+        filter: drop-shadow(0px 0px 50px rgba(204, 204, 255, 0.5));
+    }
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, var(--periwinkle), var(--lavender));
+    box-shadow: var(--glow-peri);
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: var(--font-title);
+    color: var(--dark-text);
+    text-shadow: var(--glow-white);
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-family: var(--font-title);
+    color: var(--dark-text);
+    margin-top: 0.5rem;
+}
+
+.profile-image {
+    width: 200px; /* desired width */
+    height: 150px; /* desired height */
+    object-fit: cover; /* ensures the image fills the container */
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+/* Navigation */
+nav {
+    background: var(--periwinkle);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid var(--lavender);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: var(--font-title);
+    color: var(--dark-text);
+    padding: 10px 20px;
+    transition: text-shadow 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+    text-shadow: var(--glow-peri);
+    transform: scale(1.1);
+}
+
+/* Main Layout (from Cybertech) */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Section Box (Cybertech look, Periwinkle colors) */
+section {
+    background: rgba(255, 255, 255, 0.8);
+    border: 2px solid var(--periwinkle);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--glow-peri);
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 25px var(--periwinkle);
+}
+
+h2 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--periwinkle);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    font-family: var(--font-title);
+}
+
+/* Projects Section */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#projects article {
+    background: var(--lavender);
+    color: var(--dark-text);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid var(--periwinkle);
+    box-shadow: var(--glow-peri);
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#projects article:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 0px 25px var(--periwinkle);
+}
+
+#projects h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Tables (Experience) */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+th,
+td {
+    border: 1px solid var(--dark-text);
+    padding: 0.5rem;
+}
+
+/* Contact Form */
+#contact form {
+    display: grid;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact label {
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border: 1px solid var(--dark-text);
+    border-radius: 5px;
+    font-size: 1em;
+    background: var(--white);
+    color: var(--dark-text);
+}
+
+#contact input[type="submit"] {
+    background: var(--periwinkle);
+    color: var(--dark-text);
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: transform 0.2s, background 0.3s ease-in-out;
+}
+
+#contact input[type="submit"]:hover {
+    background: var(--lavender);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, var(--periwinkle), var(--lavender));
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    color: var(--dark-text);
+    text-shadow: var(--glow-white);
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    body::before {
+        width: 80%;
+        height: 80%;
+        opacity: 0.2; /* Adjust visibility on smaller screens */
+        left: 70%;    /* Shift a bit so it still stays mostly right */
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects article {
+        flex: 1 1 100%;
+    }
+}
