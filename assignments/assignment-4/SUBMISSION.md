@@ -6,7 +6,7 @@ Links
 
 GitHub Repository: https://github.com/your‑username/assignment‑4
 
-Live Demo (GitHub Pages): https://your‑username.github.io/assignment‑4/
+Live Demo (GitHub Pages): (https://ener-gee3.github.io/CSC317b/)
 
 
 This project delivers a lightweight, single‑page JavaScript calculator integrated into my portfolio site.  The calculator is written in vanilla JS, HTML, and CSS—no external libraries—so it loads quickly and is easy to audit.  Key features include full keyboard and touch support, real‑time expression evaluation with percentage handling, a dedicated back‑space key, and animated calculation history that fades in at the top of the list.  A memory register (M+, M‑, MR) is persisted with localStorage, while a theme toggle adds an accessible dark‑mode experience.  The UI is responsive: buttons are laid out with CSS Grid, sized with flex‑friendly units, and styled as circular controls that scale down on mobile.
